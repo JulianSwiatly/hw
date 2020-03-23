@@ -2,6 +2,8 @@ from typing import List
 
 import pandas as pd
 
+import datetime
+
 CONFIRMED_CASES_URL = f"https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data" \
 f"/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv "
 
@@ -11,8 +13,6 @@ When downloading data it's better to do it in a global scope instead of a functi
 This speeds up the tests significantly
 """
 
-
-import datetime
 confirmed_cases = pd.read_csv(CONFIRMED_CASES_URL, error_bad_lines=False)
 
 
